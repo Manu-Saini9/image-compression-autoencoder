@@ -17,9 +17,21 @@ Built with **TensorFlow/Keras** on the **BSD500** (Berkeley Segmentation Dataset
 | Method | Test MSE | Improvement |
 |---|---|---|
 | Bicubic Interpolation (Baseline) | 0.002585 | — |
-| **CNN Autoencoder (Ours)** | **0.001610** | **~37% better** |
+| **CNN Autoencoder (Ours)** | **0.001610** | **~37.7% better** |
 
 > Lower MSE = better reconstruction quality
+
+### Compression method comparison
+
+![MSE Comparison](results/mse_comparison.png)
+
+### Sample image compressions (Original → Compressed → Reconstructed)
+
+![Sample Comparisons](results/sample_comparisons.png)
+
+### Training history (50 epochs)
+
+![Training History](results/training_history.png)
 
 ---
 
@@ -127,7 +139,7 @@ Evaluates bicubic interpolation on 10 test images. Results saved to `results/bas
 ```bash
 python autoencoder.py
 ```
- Takes ~2–3 hours. A **pre-trained model** is included in `models/autoencoder.h5` — skip this if you just want to evaluate.
+Takes ~2–3 hours. A **pre-trained model** is included in `models/autoencoder.h5` — skip this if you just want to evaluate.
 
 ### Step 4 — Test on Any Image
 ```bash
